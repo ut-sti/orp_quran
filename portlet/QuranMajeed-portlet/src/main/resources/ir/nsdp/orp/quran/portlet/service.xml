@@ -1,0 +1,168 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="mypack">
+	<author>Majid Abdollahi</author>
+	<namespace>Portlet</namespace>
+
+	<entity name="Aye" local-service="true" remote-service="true">
+		<column name="ayeId" type="long" primary="true"/>
+		<column name="idSoreh" type="long"/>
+		<column name="ayeText" type="String" />
+		<column name="ayeSajde" type="boolean" />
+		<column name="ayeShan" type="String" />
+		<column name="jozNumber" type="long" />
+		<column name="hezbNumber" type="long" />
+
+		<order by="asc">
+			<order-column name="ayeId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<entity name="Soreh" local-service="true" remote-service="true">
+		<column name="sorehId" type="long" primary="true"/>
+		<!-- Soreh: Maki or Madani -->
+		<column name="sorehMM" type="boolean"/>
+		<column name="jozNumber" type="long" />
+		<column name="hezbNumber" type="long" />
+
+		<order by="asc">
+			<order-column name="sorehId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<entity name="Comment" local-service="true" remote-service="true">
+		<column name="commentId" type="long" primary="true"/>
+		<column name="idAye" type="long"/>
+		<column name="commentText" type="String" />
+		<column name="commentUserId" type="long" />
+
+		<order by="asc">
+			<order-column name="commentId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<entity name="Hadis" local-service="true" remote-service="true">
+		<column name="hadisId" type="long" primary="true"/>
+		<column name="idAye" type="long"/>
+		<column name="hadisText" type="String" />
+		<column name="hadisAuthor" type="String" />
+		<column name="hadisSource" type="String" />
+		<column name="hadisFrom" type="String" />
+		<order by="asc">
+			<order-column name="HadisId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<entity name="Sout" local-service="true" remote-service="true">
+		<column name="soutId" type="long" primary="true"/>
+		<column name="idAye" type="long"/>
+		<column name="soutFile" type="String" />
+		<column name="soutGhari" type="String" />
+		<column name="soutSabk" type="String" />
+		<order by="asc">
+			<order-column name="soutId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<entity name="Tafsir" local-service="true" remote-service="true">
+		<column name="tafsirId" type="long" primary="true"/>
+		<column name="idAye" type="long"/>
+		<column name="tafsirText" type="String" />
+		<column name="tafsirAuthor" type="String" />
+		<column name="tafsirBook" type="String" />
+		<order by="asc">
+			<order-column name="tafsirId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<entity name="Tarjomeh" local-service="true" remote-service="true">
+		<column name="tarjomehId" type="long" primary="true"/>
+		<column name="idAye" type="long"/>
+		<column name="tarjomehText" type="String" />
+		<column name="tarjomehLanguage" type="String" />
+		<column name="tarjomhTranslator" type="String" />
+		<order by="asc">
+			<order-column name="tarjomehId" />
+		</order>
+
+		<!--  <finder return-type="Collection" name="C_G_C">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="C_G_C_BN" return-type="Book" unique="true">
+			<finder-column name="companyId" />
+			<finder-column name="groupId" />
+			<finder-column name="bookName" />
+		</finder> -->
+	</entity>
+	<exceptions>
+		<exception>AyeAyeId</exception>
+		<exception>SorehSorehId</exception>
+		<exception>CommentCommentId</exception>
+		<exception>HadisHadisId</exception>
+		<exception>SoutSoutId</exception>
+		<exception>TafsirTafsirId</exception>
+		<exception>TarjomehTarjomehId</exception>
+		<exception>AyeAyeText</exception>
+		<exception>CommentCommentText</exception>
+		<exception>HadisHadisText</exception>
+		<exception>TafsirTafsirText</exception>
+		<exception>TarjomehTarjomehText</exception>
+		<exception>BookAuthorName</exception>
+		<exception>BookPrice</exception>
+	</exceptions>
+</service-builder>
